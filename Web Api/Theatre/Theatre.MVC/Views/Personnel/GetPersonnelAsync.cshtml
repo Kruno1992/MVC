@@ -1,0 +1,50 @@
+﻿@model Theatre.MVC.Models.PersonnelView
+
+@{
+    ViewBag.Title = "GetPersonnelAsync";
+}
+
+<h2>GetPersonnelAsync</h2>
+
+<div>
+    <h4>PersonnelView</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonnelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonnelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoursOfWork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoursOfWork)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditPersonnelAsync", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "GetAllPersonnelAsync")
+</p>

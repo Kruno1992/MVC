@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Theatre.MVC.Models.PersonnelView>
+
+@{
+    ViewBag.Title = "GetAllPersonnelAsync";
+}
+
+<h2>GetAllPersonnelAsync</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddPersonnelAsync")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonnelName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoursOfWork)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonnelName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoursOfWork)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditPersonnelAsync", new { id=item.Id }) |
+            @Html.ActionLink("Details", "GetPersonnelAsync", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeletePersonnelAsync", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
